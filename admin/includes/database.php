@@ -8,29 +8,36 @@ class Database{
     }
 
     public function openDbConnection(){
-        $this->connection = mysqli_connect(DB_HOST,DB_USER,BD_PASS,DB_NAME);
+//        $this->connection = mysqli_connect(DB_HOST,DB_USER,BD_PASS,DB_NAME);
+         $this->connection = new mysqli(DB_HOST,DB_USER,BD_PASS,DB_NAME);
 
-        if (mysqli_connect_errno()){
-            die("Database connection failed".mysqli_error());
+        if ($this->connection->connect_errno){
+            die("Database connection failed".$this->connection->connect_error);
         }
-
     }
 
     public function query($sql){
-        $result = mysqli_query($this->connection,$sql);
-        return $result;
+        $result = $this->connection->query($sql);
+        return $this->confirmQuery($result);
     }
 
     private function confirmQuery($result){
         if(!$result){
-            die("Query Failed");
+
+            die("Query Failed ".$this->connection->error);
         }
+        return $result;
     }
 
     public function escapeString($string){
-        $escapedString =  mysqli_real_escape_string($this->connection,$string);
+        $escapedString =  $this->connection->real_escape_string($string);
 
         return $escapedString;
     }
+
+    public function theInsertId(){
+        return $this->connection->insert_id;
+    }
 }
 $database = new Database();
+
