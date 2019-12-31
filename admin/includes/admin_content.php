@@ -7,6 +7,17 @@
                 Blank Page
                 <small>Subheading</small>
             </h1>
+            <?php
+                $sql = "SELECT * FROM users WHERE id = 1";
+                $result = $database->query($sql);
+                $user =mysqli_fetch_assoc($result);
+//                $user = mysqli_fetch_array($result,MYSQLI_ASSOC);
+//                 print_r($user);
+            foreach ($user as $u){
+                echo $u;
+            }
+
+            ?>
             <ol class="breadcrumb">
                 <li>
                     <i class="fa fa-dashboard"></i>  <a href="index.html">Dashboard</a>
