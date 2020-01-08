@@ -27,6 +27,8 @@ class User
 
     }
 
+
+
     public static function doTheQuery($sql){
         global $database;
         $object = array();
@@ -36,6 +38,23 @@ class User
             $object[] = self::instantiation($row);
         }
         return $object;
+    }
+
+
+    public static function verifyUser($username, $password){
+        global $database;
+        $username = $database->escapeString($username);
+        $password = $database->escapeString($password);
+
+        $sql = "SELECT * FROM users WHERE ";
+        $sql .= "username = '{$username}' ";
+        $sql .= "AND password = '{$password}' ";
+        $sql .= "LIMIT 1";
+
+        $theResultArray =  self::doTheQuery($sql);
+        return !empty($theResultArray) ? array_shift($theResultArray) : false;
+
+
     }
 
     private static function instantiation($result){

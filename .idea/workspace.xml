@@ -3,8 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="c4a77011-6a4e-412c-9b72-c3ee71affbdb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/includes/admin_content.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/includes/admin_content.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/includes/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/includes/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/includes/init.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/includes/init.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/includes/user.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/includes/user.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +48,9 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\xampp7312\htdocs\gallery\admin" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="V:\htdocs\gallery\admin" />
     </key>
@@ -76,7 +81,8 @@
       <workItem from="1577723070286" duration="3333000" />
       <workItem from="1577782467426" duration="14887000" />
       <workItem from="1578397859427" duration="3708000" />
-      <workItem from="1578473406122" duration="638000" />
+      <workItem from="1578473406122" duration="5936000" />
+      <workItem from="1578484271940" duration="7510000" />
     </task>
     <servers />
   </component>
@@ -88,18 +94,23 @@
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="432" y="162" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1680.1010/1680.-29.1920.1080@0.0.1680.1010" timestamp="1578407950464" />
+    <state x="520" y="232" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1578484254790">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="520" y="232" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1680.1010/1680.-29.1920.1080@0.0.1680.1010" timestamp="1578484254790" />
     <state x="626" y="318" key="NewPhpClassDialog" timestamp="1577789365700">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="626" y="318" key="NewPhpClassDialog/0.0.1680.1010/1680.-29.1920.1080@0.0.1680.1010" timestamp="1577789365700" />
-    <state x="-705" y="448" key="NewPhpFileDialog" timestamp="1577723391625">
-      <screen x="-1080" y="-434" width="1080" height="1880" />
+    <state x="583" y="474" key="NewPhpFileDialog" timestamp="1578491429371">
+      <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="-705" y="448" key="NewPhpFileDialog/-1080.-434.1080.1880/1920.112.1920.1080/0.0.1920.1040@-1080.-434.1080.1880" timestamp="1577723391625" />
-    <state x="366" y="420" key="com.intellij.ide.util.TipDialog" timestamp="1578474086016">
+    <state x="583" y="474" key="NewPhpFileDialog/0.0.1680.1010/1680.-29.1920.1080@0.0.1680.1010" timestamp="1578491429371" />
+    <state x="366" y="420" key="com.intellij.ide.util.TipDialog" timestamp="1578484406301">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="-845" y="348" key="com.intellij.ide.util.TipDialog/-1080.-434.1080.1880/1920.112.1920.1080/0.0.1920.1040@-1080.-434.1080.1880" timestamp="1577723079888" />
-    <state x="366" y="420" key="com.intellij.ide.util.TipDialog/0.0.1680.1010/1680.-29.1920.1080@0.0.1680.1010" timestamp="1578474086016" />
+    <state x="366" y="420" key="com.intellij.ide.util.TipDialog/0.0.1680.1010/1680.-29.1920.1080@0.0.1680.1010" timestamp="1578484406301" />
   </component>
 </project>
