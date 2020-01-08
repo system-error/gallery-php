@@ -15,7 +15,16 @@ class User
     }
 
     public static function findTheUserById($id){
-        return self::doTheQuery("SELECT * FROM users WHERE id ={$id}");
+        $theResultArray =  self::doTheQuery("SELECT * FROM users WHERE id ={$id} LIMIT 1");
+
+        return !empty($theResultArray) ? array_shift($theResultArray) : false;
+//        if(!empty($theResultArry)){
+//            return $firstItem = array_shift($theResultArry);
+//
+//        }else{
+//            return false;
+//        }
+
     }
 
     public static function doTheQuery($sql){

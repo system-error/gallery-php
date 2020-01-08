@@ -11,26 +11,20 @@
             <?php
                     //$user = mysqli_fetch_array($result,MYSQLI_ASSOC);
                     //print_r($user);
-//            --------------------------------------------------------------------
+//         --------------------------------------------------------------------------
                 $resultAllUsers = User::findAllUsers();
 
                     foreach ($resultAllUsers as $user){
                         echo $user->first_name."<br>";
                     }
+                    echo"<br>";
 //                while($row = mysqli_fetch_array($resultAllUsers)){
 //                    echo $row['username']."<br>";
 //                }
 //         --------------------------------------------------------------------------
                 $resultUsersById = User::findTheUserById(1);
 //         --------------------------------------------------------------------------
-                foreach ($resultUsersById as $user){
-                    echo $user->first_name;
-                }
-
-
-
-
-
+                echo $resultUsersById->username;
 
             ?>
 
