@@ -27,8 +27,6 @@ class User
 
     }
 
-
-
     public static function doTheQuery($sql){
         global $database;
         $object = array();

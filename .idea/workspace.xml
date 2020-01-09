@@ -3,10 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="c4a77011-6a4e-412c-9b72-c3ee71affbdb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/includes/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/includes/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/includes/init.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/includes/init.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/includes/session.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/includes/session.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/includes/top_nav.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/includes/top_nav.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/includes/user.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/includes/user.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/login.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,13 +45,14 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/admin" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\xampp7312\htdocs\gallery\admin" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\xampp7312\htdocs\gallery\admin" />
       <recent name="V:\htdocs\gallery\admin" />
     </key>
   </component>
@@ -82,18 +83,29 @@
       <workItem from="1577782467426" duration="14887000" />
       <workItem from="1578397859427" duration="3708000" />
       <workItem from="1578473406122" duration="5936000" />
-      <workItem from="1578484271940" duration="7510000" />
+      <workItem from="1578484271940" duration="19277000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="WindowStateProjectService">
-    <state x="432" y="162" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1578407950464">
+    <state x="432" y="162" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1578570633591">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state x="432" y="162" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1680.1010/1680.-29.1920.1080@0.0.1680.1010" timestamp="1578407950464" />
+    <state x="432" y="162" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1680.1010/1680.-29.1920.1080@0.0.1680.1010" timestamp="1578570633591" />
     <state x="520" y="232" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1578484254790">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
@@ -102,11 +114,11 @@
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="626" y="318" key="NewPhpClassDialog/0.0.1680.1010/1680.-29.1920.1080@0.0.1680.1010" timestamp="1577789365700" />
-    <state x="583" y="474" key="NewPhpFileDialog" timestamp="1578491429371">
+    <state x="583" y="474" key="NewPhpFileDialog" timestamp="1578570558767">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="-705" y="448" key="NewPhpFileDialog/-1080.-434.1080.1880/1920.112.1920.1080/0.0.1920.1040@-1080.-434.1080.1880" timestamp="1577723391625" />
-    <state x="583" y="474" key="NewPhpFileDialog/0.0.1680.1010/1680.-29.1920.1080@0.0.1680.1010" timestamp="1578491429371" />
+    <state x="583" y="474" key="NewPhpFileDialog/0.0.1680.1010/1680.-29.1920.1080@0.0.1680.1010" timestamp="1578570558767" />
     <state x="366" y="420" key="com.intellij.ide.util.TipDialog" timestamp="1578484406301">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
