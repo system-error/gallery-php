@@ -53,6 +53,18 @@ class DdClass
         return array_key_exists($property,$objectProperties);
     }
 
+    protected function properties(){
+        //return get_object_vars($this); // takes the properties of the class and put them in assoc array
+        $properties = array();
+        foreach (static::$dbTableFields as $dbField){
+            if(property_exists($this,$dbField)){
+                $properties[$dbField] = $this->$dbField;
+            }
+        }
+
+        return $properties;
+    }
+
     protected function escapedProperties(){
         global $database;
 
