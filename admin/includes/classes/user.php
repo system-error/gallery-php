@@ -1,7 +1,7 @@
 <?php
 
 
-class User extends DdClass
+class User extends dbClass
 {
     protected static $dbTable = "users";
     protected static $dbTableFields = array('username','password','first_name','last_name');
@@ -27,20 +27,5 @@ class User extends DdClass
 
 
     }
-
-
-
-    protected function properties(){
-        //return get_object_vars($this); // takes the properties of the class and put them in assoc array
-        $properties = array();
-        foreach (self::$dbTableFields as $dbField){
-            if(property_exists($this,$dbField)){
-                $properties[$dbField] = $this->$dbField;
-            }
-        }
-
-        return $properties;
-    }
-
 
 }

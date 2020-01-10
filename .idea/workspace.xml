@@ -4,11 +4,10 @@
     <list default="true" id="c4a77011-6a4e-412c-9b72-c3ee71affbdb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/includes/admin_content.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/includes/admin_content.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/includes/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/includes/classes/database.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/includes/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/includes/functions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/includes/classes/dbClass.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/includes/classes/dbClass.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/includes/classes/photo.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/includes/classes/photo.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/includes/classes/user.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/includes/classes/user.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/includes/init.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/includes/init.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/includes/session.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/includes/classes/session.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/includes/user.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/includes/classes/user.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +86,7 @@
       <workItem from="1577782467426" duration="14887000" />
       <workItem from="1578397859427" duration="3708000" />
       <workItem from="1578473406122" duration="5936000" />
-      <workItem from="1578484271940" duration="42278000" />
+      <workItem from="1578484271940" duration="44213000" />
     </task>
     <servers />
   </component>
@@ -114,6 +113,10 @@
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="520" y="232" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1680.1010/1680.-29.1920.1080@0.0.1680.1010" timestamp="1578484254790" />
+    <state x="413" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1578667415332">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="413" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1680.1010/1680.-29.1920.1080@0.0.1680.1010" timestamp="1578667415332" />
     <state x="626" y="318" key="NewPhpClassDialog" timestamp="1578666760604">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>

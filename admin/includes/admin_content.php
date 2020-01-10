@@ -18,29 +18,52 @@
 //
 //                    $user->create();
 
-//                    $user = User::findTheUserById(5);
+//                    $user = User::findThisQueryById(5);
 //                    $user->last_name = "kaladas tou kavourdiri tou kwsta";
 //                    $user->update();
-//                    $user = User::findTheUserById(3);
+//                    $user = User::findThisQueryById(4);
 //                    $user->delete();
 
 
             //$user = mysqli_fetch_array($result,MYSQLI_ASSOC);
                     //print_r($user);
 //         --------------------------------------------------------------------------
-                $resultAllUsers = User::findAll();
+//                $resultAllUsers = User::findAll();
+//
+//                    foreach ($resultAllUsers as $user){
+//                        echo $user->first_name."<br>";
+//                    }
+//                    echo"<br>";
 
-                    foreach ($resultAllUsers as $user){
-                        echo $user->first_name."<br>";
-                    }
-                    echo"<br>";
+
+//                $resultAllPhotos = Photo::findAll();
+//
+//                foreach ($resultAllPhotos as $photo){
+//                    echo $photo->description."<br>";
+//                }
+//                echo"<br>";
+
+                                $photo = new Photo();
+                                $photo->description = "the photo";
+                                $photo->type = "png";
+                                $photo->title = "pho";
+                                $photo->filename="dsgf.png";
+                                $photo->size = "152000000000000000000";
+
+                                $photo->create();
+
+
+
+
+
+
 //                while($row = mysqli_fetch_array($resultAllUsers)){
 //                    echo $row['username']."<br>";
 //                }
 //         --------------------------------------------------------------------------
-                $resultUsersById = User::findThisQueryById(1);
+//                $resultUsersById = User::findThisQueryById(1);
 //         --------------------------------------------------------------------------
-                echo $resultUsersById->username;
+//                echo $resultUsersById->username;
 
             ?>
 
