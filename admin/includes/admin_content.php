@@ -43,15 +43,16 @@
 //                }
 //                echo"<br>";
 
-                                $photo = new Photo();
-                                $photo->description = "the photo";
-                                $photo->type = "png";
-                                $photo->title = "pho";
-                                $photo->filename="dsgf.png";
-                                $photo->size = "152000000000000000000";
+//                $photo = new Photo();
+//                $photo->description = "the photo";
+//                $photo->type = "png";
+//                $photo->title = "pho";
+//                $photo->filename="dsgf.png";
+//                $photo->size = "152000000000000000000";
+//
+//                $photo->create();
 
-                                $photo->create();
-
+            echo __FILE__."<br>";
 
 
 
