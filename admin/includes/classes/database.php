@@ -1,5 +1,5 @@
 <?php
-require_once ("new_config.php");
+require_once("includes/new_config.php");
 
 class Database{
     public $connection;
@@ -18,6 +18,7 @@ class Database{
 
     public function query($sql){
         $result = $this->connection->query($sql);
+
         return $this->confirmQuery($result);
     }
 

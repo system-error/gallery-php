@@ -9,10 +9,26 @@
             </h1>
 
             <?php
-                    //$user = mysqli_fetch_array($result,MYSQLI_ASSOC);
+
+//                    $user = new User();
+//                    $user->username = "the_username";
+//                    $user->password = "password";
+//                    $user->first_name = "tester";
+//                    $user->last_name = "testaki";
+//
+//                    $user->create();
+
+//                    $user = User::findTheUserById(5);
+//                    $user->last_name = "kaladas tou kavourdiri tou kwsta";
+//                    $user->update();
+//                    $user = User::findTheUserById(3);
+//                    $user->delete();
+
+
+            //$user = mysqli_fetch_array($result,MYSQLI_ASSOC);
                     //print_r($user);
 //         --------------------------------------------------------------------------
-                $resultAllUsers = User::findAllUsers();
+                $resultAllUsers = User::findAll();
 
                     foreach ($resultAllUsers as $user){
                         echo $user->first_name."<br>";
@@ -22,7 +38,7 @@
 //                    echo $row['username']."<br>";
 //                }
 //         --------------------------------------------------------------------------
-                $resultUsersById = User::findTheUserById(1);
+                $resultUsersById = User::findThisQueryById(1);
 //         --------------------------------------------------------------------------
                 echo $resultUsersById->username;
 
