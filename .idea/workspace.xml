@@ -5,7 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/includes/admin_content.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/includes/admin_content.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/includes/classes/photo.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/includes/classes/photo.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/includes/init.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/includes/init.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/upload.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/upload.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +34,13 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="hiddenUrls">
+      <set>
+        <option value="https://github.com/system-error/gallery-php.git" />
+      </set>
+    </option>
+  </component>
   <component name="ProjectId" id="1Vf1uONvxqxLOejm2v971rHvC7v" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -45,7 +52,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/admin" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../bootstrap" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -87,6 +94,7 @@
       <workItem from="1578484271940" duration="44213000" />
       <workItem from="1578675922412" duration="737000" />
       <workItem from="1578679852332" duration="4787000" />
+      <workItem from="1578913044333" duration="4289000" />
     </task>
     <servers />
   </component>
@@ -119,6 +127,10 @@
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="413" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1680.1010/1680.-29.1920.1080@0.0.1680.1010" timestamp="1578667415332" />
+    <state x="620" y="259" key="FileChooserDialogImpl" timestamp="1578918455987">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="620" y="259" key="FileChooserDialogImpl/0.0.1680.1010/1680.-29.1920.1080@0.0.1680.1010" timestamp="1578918455987" />
     <state x="626" y="318" key="NewPhpClassDialog" timestamp="1578666760604">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
@@ -128,11 +140,11 @@
     </state>
     <state x="-705" y="448" key="NewPhpFileDialog/-1080.-434.1080.1880/1920.112.1920.1080/0.0.1920.1040@-1080.-434.1080.1880" timestamp="1577723391625" />
     <state x="583" y="474" key="NewPhpFileDialog/0.0.1680.1010/1680.-29.1920.1080@0.0.1680.1010" timestamp="1578570558767" />
-    <state x="-845" y="348" key="com.intellij.ide.util.TipDialog" timestamp="1578679852415">
-      <screen x="-1080" y="-434" width="1080" height="1880" />
+    <state x="366" y="420" key="com.intellij.ide.util.TipDialog" timestamp="1578913051291">
+      <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="-845" y="348" key="com.intellij.ide.util.TipDialog/-1080.-434.1080.1880/1920.112.1920.1080/0.0.1920.1040@-1080.-434.1080.1880" timestamp="1578679852415" />
-    <state x="366" y="420" key="com.intellij.ide.util.TipDialog/0.0.1680.1010/1680.-29.1920.1080@0.0.1680.1010" timestamp="1578484406301" />
+    <state x="366" y="420" key="com.intellij.ide.util.TipDialog/0.0.1680.1010/1680.-29.1920.1080@0.0.1680.1010" timestamp="1578913051291" />
     <state x="487" y="119" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1578666452057">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>

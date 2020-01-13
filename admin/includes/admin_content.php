@@ -52,7 +52,7 @@
 //
 //                $photo->create();
 
-            echo __FILE__."<br>";
+            echo INCLUDES_PATH."<br>";
 
 
 

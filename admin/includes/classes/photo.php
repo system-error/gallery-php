@@ -41,4 +41,36 @@ class photo extends dbClass
         }
     }
 
+    public function save(){
+        if($this->id){
+           $this->update();
+        }else{
+
+            if(!empty($customErrors)){
+                return false;
+            }
+            if(empty($this->filename) || empty($this->tmpPath)){
+                $this->customErrors[] = "The file was not available ";
+                return false;
+            }
+
+            $photoPath = SITE_ROOT.DS.'admin'.DS.$this->uploadDirectory.DS.$this->filename;
+            if(file_exists($photoPath)){
+                $this->customErrors[] = "The file {$this->filename} already exists";
+                return false;
+            }
+
+            if(move_uploaded_file($this->tmpPath,$photoPath)){
+                if($this->create()){
+                    unset($this->tmpPath);
+                    return true;
+                }
+            }else{
+                $this->customErrors[] = "The file directory propably does not have permisions";
+                return false;
+            }
+        }
+    }
+
+
 }
