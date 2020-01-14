@@ -34,11 +34,15 @@ class photo extends dbClass
             return false;
         }else {
             $this->filename = basename($file['name']);
-            $this->tmpPath  = $file['tmpPath'];
+            $this->tmpPath  = $file['tmp_name'];
             $this->type     = $file['type'];
             $this->size     = $file['size'];
 
         }
+    }
+
+    public function imagePath(){
+        return $this->uploadDirectory.DS.$this->filename;
     }
 
     public function save(){
@@ -70,6 +74,10 @@ class photo extends dbClass
                 return false;
             }
         }
+    }
+
+    public function deleteImage(){
+
     }
 
 

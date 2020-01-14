@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="c4a77011-6a4e-412c-9b72-c3ee71affbdb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/includes/admin_content.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/includes/admin_content.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/includes/classes/photo.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/includes/classes/photo.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/photos.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/photos.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/upload.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/upload.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -52,16 +52,16 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../bootstrap" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/admin" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\xampp7312\htdocs\gallery\admin\includes\classes" />
-      <recent name="E:\xampp7312\htdocs\gallery\admin" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\xampp7312\htdocs\gallery\admin" />
       <recent name="V:\htdocs\gallery\admin" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\xampp7312\htdocs\gallery\admin\includes\classes" />
+      <recent name="E:\xampp7312\htdocs\gallery\admin" />
     </key>
   </component>
   <component name="ServiceViewManager">
@@ -94,7 +94,7 @@
       <workItem from="1578484271940" duration="44213000" />
       <workItem from="1578675922412" duration="737000" />
       <workItem from="1578679852332" duration="4787000" />
-      <workItem from="1578913044333" duration="4289000" />
+      <workItem from="1578913044333" duration="14235000" />
     </task>
     <servers />
   </component>

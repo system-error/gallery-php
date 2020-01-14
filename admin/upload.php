@@ -6,11 +6,13 @@
         $photo = new photo();
         $photo->title = $_POST['title'];
         $photo->setFile($_FILES['fileUpload']);
+//        print_r($_FILES['fileUpload']);
+//        die();
 
         if($photo->save()){
             $message = "Photo uploaded succesfully";
         }else{
-            $message = join("<br>",$photo->uploadErrors);
+            $message = join("<br>",$photo->customErrors);
         }
     }
 
