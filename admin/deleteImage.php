@@ -3,13 +3,16 @@
 <?php
 
     if(empty($_GET['id'])){
-        redirect("photos.php");
+        redirect("../photos.php");
     }else{
         $photo = photo::findThisQueryById($_GET['id']);
     }
 
     if($photo){
         $photo->deleteImage();
+        redirect("../photos.php");
+    }else{
+        redirect("../photos.php");
     }
 
 ?>

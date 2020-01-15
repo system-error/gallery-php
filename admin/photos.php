@@ -46,17 +46,17 @@
                             <tbody>
                             <?php foreach ($photos as $photo) : ?>
                                 <tr>
-                                    <td><img src="<?php echo file_exists($photo->imagePath())? $photo->imagePath() : 'https://via.placeholder.com/150' ?>" width="150" height="150" alt="">
+                                    <td><img class="admin-photo-thumbnail" src="<?php echo file_exists($photo->imagePath())? $photo->imagePath() : 'https://via.placeholder.com/150' ?>" width="150" height="150" alt="">
                                         <div class="images">
-                                            <a href="deleteImage.php/?id=<?php echo $photo->id?>">Delete</a>
-                                            <a href="">Edit</a>
+                                            <a href="deleteImage.php?id=<?php echo $photo->id?>">Delete</a>
+                                            <a href="editPhoto.php?id=<?php echo $photo->id?>">Edit</a>
                                             <a href="">View</a>
                                         </div>
                                     </td>
                                     <td><?php echo $photo->id ?></td>
                                     <td><?php echo $photo->filename ?></td>
                                     <td><?php echo $photo->title ?></td>
-                                    <td><?php echo $photo->size ?></td>
+                                    <td><?php echo floor($photo->size/1000) ?> KB</td>
                                 </tr>
                             <?php endforeach; ?>
                             </tbody>

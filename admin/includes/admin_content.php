@@ -53,6 +53,27 @@
 //                $photo->create();
 
             echo INCLUDES_PATH."<br>";
+            $photo = Photo::findThisQueryById(7);
+
+            echo $photo->filename;
+
+//            $user = User::findThisQueryById(7);
+//            echo  $user->username;
+//            echo "<br>";
+
+            echo IMAGES_PATH;
+            echo "<br>";
+
+            $date = date("Y-m-d h:i:sa",strtotime($photo->uploadedAt));
+
+//           foreach ($date as $key=>$d){
+//               echo $key." = ".$d ."<br>";
+//            }
+            echo "<br>";
+//           echo $date['seconds'];
+//            echo "<br>";
+            print_r($date);
+            die();
 
 
 

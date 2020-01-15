@@ -4,10 +4,13 @@
 class photo extends dbClass
 {
     protected static $dbTable = "photos";
-    protected static $dbTableFields = array('id','title','description','filename','type','size');
+    protected static $dbTableFields = array('id','title','caption','description','filename','alternateText','type','size','uploadedAt');
     public $id;
     public $title;
     public $description;
+    public $alternateText;
+    public $caption;
+    public $uploadedAt;
     public $filename;
     public $type;
     public $size;
@@ -58,7 +61,7 @@ class photo extends dbClass
                 return false;
             }
 
-            $photoPath = SITE_ROOT.DS.'admin'.DS.$this->uploadDirectory.DS.$this->filename;
+            $photoPath = IMAGES_PATH.DS.$this->filename;
             if(file_exists($photoPath)){
                 $this->customErrors[] = "The file {$this->filename} already exists";
                 return false;
@@ -77,6 +80,13 @@ class photo extends dbClass
     }
 
     public function deleteImage(){
+
+        if($this->delete()){
+            $targetPath = IMAGES_PATH.DS.$this->filename;
+            return unlink($targetPath) ? true : false;
+        }else{
+            return false;
+        }
 
     }
 
