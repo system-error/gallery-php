@@ -6,6 +6,7 @@
         $photo = new photo();
         $photo->title = $_POST['title'];
         $photo->setFile($_FILES['fileUpload']);
+
 //        print_r($_FILES['fileUpload']);
 //        die();
 

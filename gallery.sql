@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 10, 2020 at 04:12 PM
+-- Generation Time: Jan 15, 2020 at 05:10 PM
 -- Server version: 10.4.10-MariaDB
 -- PHP Version: 7.3.12
 
@@ -31,19 +31,21 @@ SET time_zone = "+00:00";
 CREATE TABLE `photos` (
   `id` int(11) NOT NULL,
   `title` varchar(255) NOT NULL,
+  `caption` varchar(255) NOT NULL,
   `description` text NOT NULL,
   `filename` varchar(255) NOT NULL,
+  `alternateText` varchar(255) NOT NULL,
   `type` varchar(255) NOT NULL,
-  `size` int(11) NOT NULL
+  `size` int(11) NOT NULL,
+  `uploadedAt` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `photos`
 --
 
-INSERT INTO `photos` (`id`, `title`, `description`, `filename`, `type`, `size`) VALUES
-(1, 'test', 'testaki', 'safasf.jpg', 'jpeg', 152425),
-(2, 'pho', 'the photo', 'dsgf.png', 'png', 2147483647);
+INSERT INTO `photos` (`id`, `title`, `caption`, `description`, `filename`, `alternateText`, `type`, `size`, `uploadedAt`) VALUES
+(8, 'egfsadsgadsg', 'gfhj', 'gdfj', '14e5517bf4fa0d5705892c9e68ca5d55.jpg', 'gfj', 'image/jpeg', 199973, '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -92,7 +94,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `photos`
 --
 ALTER TABLE `photos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `users`

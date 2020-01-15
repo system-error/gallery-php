@@ -21,11 +21,12 @@
             <div class="col-lg-12">
                 <h1 class="page-header">
                     users
-                    <small>Subheading</small>
                 </h1>
+                <a href="addUser.php" class="btn btn-primary" >Add User</a>
+
                 <ol class="breadcrumb">
                     <li>
-                        <i class="fa fa-dashboard"></i>  <a href="index.html">Dashboard</a>
+                        <i class="fa fa-dashboard"></i>  <a href="index.php">Dashboard</a>
                     </li>
                     <li class="active">
                         <i class="fa fa-file"></i> Blank Page
@@ -47,12 +48,11 @@
                         <?php foreach ($users as $user) : ?>
                             <tr>
                                 <td><?php echo $user->id; ?></td>
-                                <td><img class="admin-user-thumbnail" src="<?php echo file_exists($user->imagePath())? $user->imagePath() : 'https://via.placeholder.com/150' ?>" width="150" height="150" alt=""></td>
+                                <td><img class="admin-user-thumbnail" src="<?php echo $user->imagePath() ?>" width="150" height="150" alt=""></td>
                                 <td><?php echo $user->username; ?>
                                     <div class="action-links">
                                         <a href="deleteUser.php?id=<?php echo $user->id; ?>">Delete</a>
                                         <a href="editUser.php?id=<?php echo $user->id; ?>">Edit</a>
-                                        <a href="">View</a>
                                     </div>
                                 </td>
 

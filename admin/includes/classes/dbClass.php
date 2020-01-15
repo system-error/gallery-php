@@ -1,7 +1,7 @@
 <?php
 
 
-class dbClass
+class DbClass
 {
     public static function findAll(){
         return static::doTheQuery("SELECT * FROM " .static::$dbTable. " ");
