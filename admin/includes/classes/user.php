@@ -14,17 +14,6 @@ class User extends DbClass
     public $tmpPath;
     public $placeHolder = "https://via.placeholder.com/150";
     public $uploadedFile = "images/user";
-    public $customErrors = array();
-    public $uploadErrors = array(
-        UPLOAD_ERR_OK         => "There is no error",
-        UPLOAD_ERR_INI_SIZE   => "The uploaded file exceeds the upload_max_file_size directive",
-        UPLOAD_ERR_FORM_SIZE  => "The uploaded file exceeds the MAX_FILE_SIZE",
-        UPLOAD_ERR_PARTIAL    => "The uploaded file was only partially uploaded",
-        UPLOAD_ERR_NO_FILE    => "No file was uploaded.",
-        UPLOAD_ERR_NO_TMP_DIR => "Missing a temporary folder. Introduced in PHP 5.0.3",
-        UPLOAD_ERR_CANT_WRITE => "Failed to write file to disk. Introduced in PHP 5.1.0",
-        UPLOAD_ERR_EXTENSION  => "A PHP extension stopped the file upload"
-    );
 
 
     public static function verifyUser($username, $password){
@@ -68,11 +57,10 @@ class User extends DbClass
         }
     }
 
-    public function saveUserImage(){
-        if($this->id){
-            $this->update();
-        }else{
 
+    public function saveUserImage(){
+        $photoPath = IMAGES_PATH . DS . 'user' . DS . $this->userImage;
+        if($this->id){
             if(!empty($this->customErrors)){
                 return false;
             }
@@ -81,12 +69,32 @@ class User extends DbClass
                 return false;
             }
 
-            $photoPath = IMAGES_PATH.DS.'user'.DS.$this->userImage;
             if(file_exists($photoPath)){
                 $this->customErrors[] = "The file {$this->userImage} already exists";
                 return false;
             }
+            if(move_uploaded_file($this->tmpPath,$photoPath)){
+                if($this->update()){
+                    unset($this->tmpPath);
+                    return true;
+                }
+            }else{
+                $this->customErrors[] = "The file directory propably does not have permisions";
+                return false;
+            }
+        }else {
+            if(!empty($this->customErrors)){
+                return false;
+            }
+            if(empty($this->userImage) || empty($this->tmpPath)){
+                $this->customErrors[] = "The file was not available ";
+                return false;
+            }
 
+            if(file_exists($photoPath)){
+                $this->customErrors[] = "The file {$this->userImage} already exists";
+                return false;
+            }
             if(move_uploaded_file($this->tmpPath,$photoPath)){
                 if($this->create()){
                     unset($this->tmpPath);
@@ -97,5 +105,15 @@ class User extends DbClass
                 return false;
             }
         }
+    }
+
+    public function userAddValues(User $user){
+        if ($user) {
+            $user->username = $_POST['username'];
+            $user->password = $_POST['password'];
+            $user->first_name = $_POST['firstName'];
+            $user->last_name = $_POST['lastName'];
+        }
+        return $user;
     }
 }

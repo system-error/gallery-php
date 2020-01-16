@@ -21,16 +21,28 @@ class Photo extends DbClass
 
     public function imagePath(){
         return empty($this->filename) ? $this->placeHolder : $this->uploadDirectory.DS.$this->filename;
+    }
 
-
+    public function setFile($file){
+        if(empty($file) || !$file || !is_array($file)){
+            $this->customErrors[] = "There was no file uploaded here";
+            return $this->customErrors;
+        }elseif ($file['error'] !=0){
+            $this->customErrors[] = $this->uploadErrors[$file['error']];
+            return $this->customErrors;
+        }else {
+            $this->filename = basename($file['name']);
+            $this->tmpPath  = $file['tmp_name'];
+            $this->size  = $file['size'];
+            $this->type  = $file['type'];
+        }
     }
 
     public function save(){
+
         if($this->id){
            $this->update();
         }else{
-
-
             if(!empty($this->customErrors)){
                 return false;
             }
@@ -38,13 +50,11 @@ class Photo extends DbClass
                 $this->customErrors[] = "The file was not available ";
                 return false;
             }
-
             $photoPath = IMAGES_PATH.DS.$this->filename;
             if(file_exists($photoPath)){
                 $this->customErrors[] = "The file {$this->filename} already exists";
                 return false;
             }
-
             if(move_uploaded_file($this->tmpPath,$photoPath)){
                 if($this->create()){
                     unset($this->tmpPath);
@@ -54,6 +64,7 @@ class Photo extends DbClass
                 $this->customErrors[] = "The file directory propably does not have permisions";
                 return false;
             }
+
         }
     }
 

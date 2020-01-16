@@ -3,20 +3,17 @@
     <?php
 
             $user = new User();
+            $message="";
             if (isset($_POST['submit'])) {
-                if ($user) {
-                    $user->username = $_POST['username'];
-                    $user->password = $_POST['password'];
-                    $user->first_name = $_POST['firstName'];
-                    $user->last_name = $_POST['lastName'];
-                    $user->setFile($_FILES['userImage']);
+
+                $user->userAddValues($user);
+                $user->setFile($_FILES['userImage']);
                     if($user->saveUserImage()){
-                        $message = "Photo uploaded succesfully";
+                        $message = "Photo uploaded successfully";
                     }else{
                         $message = join("<br>",$user->customErrors);
                     }
-                    $user->create();
-                }
+
             }
 
 //    $date = date("Y-m-d h:i:sa",$photo->uploadedAt);
