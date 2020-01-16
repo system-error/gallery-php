@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 15, 2020 at 07:46 PM
+-- Generation Time: Jan 16, 2020 at 04:01 PM
 -- Server version: 10.4.10-MariaDB
 -- PHP Version: 7.3.12
 
@@ -46,9 +46,7 @@ CREATE TABLE `photos` (
 
 INSERT INTO `photos` (`id`, `title`, `caption`, `description`, `filename`, `alternateText`, `type`, `size`, `uploadedAt`) VALUES
 (8, 'egfsadsgadsg', 'gfhj', 'gdfj', '14e5517bf4fa0d5705892c9e68ca5d55.jpg', 'gfj', 'image/jpeg', 199973, '0000-00-00 00:00:00'),
-(9, 'test', '', '', '2.jpg', '', 'image/jpeg', 10473, '0000-00-00 00:00:00'),
-(10, 'reyhsdhfgj', '', '', '1231182_566955016675216_252835338_n.jpg', '', 'image/jpeg', 39698, '0000-00-00 00:00:00'),
-(11, 'sfdfdsh', '', '', 'carrier_mini_2_1.jpg', '', 'image/jpeg', 2805, '0000-00-00 00:00:00');
+(9, 'test', '', '', '2.jpg', '', 'image/jpeg', 10473, '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -70,32 +68,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `password`, `first_name`, `last_name`, `userImage`) VALUES
-(10, 'riko', '123', 'rikokor', 'rikorikorikoko', '14e5517bf4fa0d5705892c9e68ca5d55.jpg'),
-(12, 'gfhgfsdj', 'gsfjgfdsjgfsd', 'gsfjgfsjg', 'gfsjgfsjjgf', ''),
-(13, 'gfhjfgsjfjfsdgjgjfs', 'gfsjgfsjjgsfjg', 'sdfghsfgdhjs', 'fgsjgdfjgfdkdhggkdk', ''),
-(14, 'asgfdsagd', 'asdfhadfshfadh', 'adfhadfhfad', 'afdhfadhfadhafdh', ''),
-(15, 'sdgdsag', 'dsagsdaghsadh', 'dsahgsdahdfsah', 'adsfhafdhfd', ''),
-(16, 'dfgjgfd', 'dgfjgdfj', 'gfdjgdfj', 'gfdjgfdj', '14e5517bf4fa0d5705892c9e68ca5d55.jpg'),
-(17, 'gfjhgfdj', 'gdfjjgdfjdgf', 'gdfjggddgjf', 'gfdjgdfjdfdfgj', 'Keno1.jpg'),
-(18, 'gfjhgfdj', 'gdfjjgdfjdgf', 'gdfjggddgjf', 'gfdjgdfjdfdfgj', 'Keno1.jpg'),
-(19, 'gdfjgffdj', 'dfgjgdfjdgf', 'dgfdjdfjg', 'gdfjjgdfjddj', 'Keno1.jpg'),
-(20, 'uilkilo', 'ilgikjl', 'gkhjlgl', 'ghjlghjl', 'Keno1.jpg'),
-(21, '', '', '', '', ''),
-(22, 'fgdhgdfsh', 'gfjhgfdj', 'gdfjgdfj', 'fgdjgfdj', ''),
-(23, '', '', '', '', ''),
-(24, '', '', '', '', ''),
-(25, 'hgfkjhgf', 'hgfjhfgkj', 'fhgkfhg', 'fhkhfgkg', ''),
-(26, '', '', '', '', ''),
-(27, '', '', '', '', ''),
-(28, '', '', '', '', ''),
-(29, '', '', '', '', ''),
-(30, '', '', '', '', ''),
-(31, '', '', '', '', ''),
-(32, '', '', '', '', ''),
-(33, '', '', '', '', ''),
-(34, 'ghjdgdhj', 'dghfjdghfk', 'dfgkjgdf', 'dfgkjdgfkfkg', ''),
-(35, '', '', '', '', ''),
-(36, '', '', '', '', 'Keno1.jpg');
+(58, 'fcgbfdgfcvfgbgfdgfbgdfgdf', 'fdshhdfdfh', 'sdfhfsshfdfhf', 'sfthaertwhtewy534622', 'images-5.jpg');
 
 --
 -- Indexes for dumped tables
@@ -121,13 +94,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `photos`
 --
 ALTER TABLE `photos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=59;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
