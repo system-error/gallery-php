@@ -10,9 +10,9 @@
 
     if($photo){
         $photo->deleteImage();
-        redirect("../photos.php");
+        redirect("photos.php");
     }else{
-        redirect("../photos.php");
+        redirect("photos.php");
     }
 
 ?>

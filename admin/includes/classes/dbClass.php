@@ -2,7 +2,7 @@
 
 
 class DbClass
-{
+{   public $tmpPath;
     public $customErrors = array();
     public $uploadErrors = array(
         UPLOAD_ERR_OK         => "There is no error",
@@ -142,19 +142,47 @@ class DbClass
         return (mysqli_affected_rows($database->connection) == 1 ? true : false);
     }
 
-    public function checkForErrors($photoPath){
-        if (!empty($this->customErrors)) {
-            return false;
-        }
-        if (empty($this->userImage) || empty($this->tmpPath)) {
-            $this->customErrors[] = "The file was not available ";
-            return false;
+    public function checkForErrors($photoPath,$imageName,$flag,$theTmpPath){
+        echo "hello0";
+        if($flag){
+            echo "hello-flag <br>";
+            echo $theTmpPath;
+            if(move_uploaded_file($theTmpPath,$photoPath)){
+                echo "flag";
+                if($this->update()){
+                    unset($theTmpPath);
+                    return true;
+                }
+            }else{
+                $this->customErrors[] = "The file directory propably does not have permisions";
+                return false;
+            }
+        }else{
+            if (!empty($this->customErrors)) {
+                echo "hello1";
+                return false;
+            }elseif (empty($imageName) || empty($theTmpPath)) {
+                echo "hello2";
+                $this->customErrors[] = "The file was not available ";
+                return false;
+            }elseif (file_exists($photoPath)) {
+                echo "hello3";
+                $this->customErrors[] = "The file {$imageName} already exists";
+                return false;
+            }elseif (move_uploaded_file($theTmpPath,$photoPath)){
+                echo "hello4";
+                if ($this->create()){
+                    echo "hello5";
+                    unset($theTmpPath);
+                    return true;
+                }
+            }else{
+                echo "hello6";
+                $this->customErrors[] = "The file directory propably does not have permisions";
+                return false;
+            }
         }
 
-        if (file_exists($photoPath)) {
-            $this->customErrors[] = "The file {$this->userImage} already exists";
-            return false;
-        }
     }
 
 }

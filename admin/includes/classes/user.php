@@ -61,18 +61,18 @@ class User extends DbClass
     public function saveUserImage(){
         $photoPath = IMAGES_PATH . DS . 'user' . DS . $this->userImage;
         if($this->id){
-            if(!empty($this->customErrors)){
-                return false;
-            }
-            if(empty($this->userImage) || empty($this->tmpPath)){
-                $this->customErrors[] = "The file was not available ";
-                return false;
-            }
-
-            if(file_exists($photoPath)){
-                $this->customErrors[] = "The file {$this->userImage} already exists";
-                return false;
-            }
+//            if(!empty($this->customErrors)){
+//                return false;
+//            }
+//            if(empty($this->userImage) || empty($this->tmpPath)){
+//                $this->customErrors[] = "The file was not available ";
+//                return false;
+//            }
+//
+//            if(file_exists($photoPath)){
+//                $this->customErrors[] = "The file {$this->userImage} already exists";
+//                return false;
+//            }
             if(move_uploaded_file($this->tmpPath,$photoPath)){
                 if($this->update()){
                     unset($this->tmpPath);
