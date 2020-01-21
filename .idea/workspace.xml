@@ -3,8 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="c4a77011-6a4e-412c-9b72-c3ee71affbdb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/includes/classes/dbClass.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/includes/classes/dbClass.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/includes/classes/photo.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/includes/classes/photo.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/comments.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/comments.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/includes/classes/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/includes/classes/database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/includes/init.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/includes/init.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/includes/new_config.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/includes/new_config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/photos.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/photos.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo.php" beforeDir="false" afterPath="$PROJECT_DIR$/photo.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,9 +69,10 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\xampp7312\htdocs\gallery\admin" />
+      <recent name="E:\xampp7312\htdocs\gallery\admin\includes\classes" />
       <recent name="V:\htdocs\gallery\admin" />
       <recent name="V:\htdocs\gallery\admin\images\user" />
-      <recent name="E:\xampp7312\htdocs\gallery\admin" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\xampp7312\htdocs\gallery\admin\includes\classes" />
@@ -107,7 +113,9 @@
       <workItem from="1579103573557" duration="8000" />
       <workItem from="1579103592698" duration="9508000" />
       <workItem from="1579171849219" duration="17978000" />
-      <workItem from="1579598123513" duration="1820000" />
+      <workItem from="1579598123513" duration="6594000" />
+      <workItem from="1579605016558" duration="2800000" />
+      <workItem from="1579608511416" duration="10089000" />
     </task>
     <servers />
   </component>
@@ -132,6 +140,10 @@
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="432" y="162" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1680.1010/1680.-29.1920.1080@0.0.1680.1010" timestamp="1578570633591" />
+    <state x="566" y="307" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1579616305270">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="566" y="307" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1680.1010/1680.-29.1920.1080@0.0.1680.1010" timestamp="1579616305270" />
     <state x="520" y="232" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1579171803489">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
@@ -149,16 +161,16 @@
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="626" y="318" key="NewPhpClassDialog/0.0.1680.1010/1680.-29.1920.1080@0.0.1680.1010" timestamp="1578666760604" />
-    <state x="-705" y="448" key="NewPhpFileDialog" timestamp="1579107055814">
-      <screen x="-1080" y="-434" width="1080" height="1880" />
+    <state x="583" y="474" key="NewPhpFileDialog" timestamp="1579616319862">
+      <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="-705" y="448" key="NewPhpFileDialog/-1080.-434.1080.1880/1920.112.1920.1080/0.0.1920.1040@-1080.-434.1080.1880" timestamp="1579107055814" />
-    <state x="583" y="474" key="NewPhpFileDialog/0.0.1680.1010/1680.-29.1920.1080@0.0.1680.1010" timestamp="1578570558767" />
-    <state x="366" y="420" key="com.intellij.ide.util.TipDialog" timestamp="1579598123410">
+    <state x="583" y="474" key="NewPhpFileDialog/0.0.1680.1010/1680.-29.1920.1080@0.0.1680.1010" timestamp="1579616319862" />
+    <state x="366" y="420" key="com.intellij.ide.util.TipDialog" timestamp="1579608512191">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="-845" y="348" key="com.intellij.ide.util.TipDialog/-1080.-434.1080.1880/1920.112.1920.1080/0.0.1920.1040@-1080.-434.1080.1880" timestamp="1579103638407" />
-    <state x="366" y="420" key="com.intellij.ide.util.TipDialog/0.0.1680.1010/1680.-29.1920.1080@0.0.1680.1010" timestamp="1579598123410" />
+    <state x="366" y="420" key="com.intellij.ide.util.TipDialog/0.0.1680.1010/1680.-29.1920.1080@0.0.1680.1010" timestamp="1579608512191" />
     <state x="487" y="119" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1578666452057">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>

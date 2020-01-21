@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 16, 2020 at 04:01 PM
+-- Generation Time: Jan 21, 2020 at 04:01 PM
 -- Server version: 10.4.10-MariaDB
 -- PHP Version: 7.3.12
 
@@ -21,6 +21,27 @@ SET time_zone = "+00:00";
 --
 -- Database: `gallery`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `comments`
+--
+
+CREATE TABLE `comments` (
+  `id` int(11) NOT NULL,
+  `photoId` int(11) NOT NULL,
+  `author` varchar(255) NOT NULL,
+  `body` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `comments`
+--
+
+INSERT INTO `comments` (`id`, `photoId`, `author`, `body`) VALUES
+(1, 49, 'hgdfjfk', 'gfhkhkffghk'),
+(6, 41, 'ertwersdwtfdg', 'fdfdshhsfhdhfsfhd fdhgfdshdfshfsdh');
 
 -- --------------------------------------------------------
 
@@ -45,8 +66,15 @@ CREATE TABLE `photos` (
 --
 
 INSERT INTO `photos` (`id`, `title`, `caption`, `description`, `filename`, `alternateText`, `type`, `size`, `uploadedAt`) VALUES
-(8, 'egfsadsgadsg', 'gfhj', 'gdfj', '14e5517bf4fa0d5705892c9e68ca5d55.jpg', 'gfj', 'image/jpeg', 199973, '0000-00-00 00:00:00'),
-(9, 'test', '', '', '2.jpg', '', 'image/jpeg', 10473, '0000-00-00 00:00:00');
+(41, '', '', '', '_large_image_1.jpg', '', 'image/jpeg', 479843, '0000-00-00 00:00:00'),
+(42, '', '', '', 'images_2.jpg', '', 'image/jpeg', 18578, '0000-00-00 00:00:00'),
+(43, '', '', '', 'images_2.jpg', '', 'image/jpeg', 18578, '0000-00-00 00:00:00'),
+(44, '', '', '', 'images-5 copy.jpg', '', 'image/jpeg', 33192, '0000-00-00 00:00:00'),
+(45, '', '', '', 'images-12 copy.jpg', '', 'image/jpeg', 18540, '0000-00-00 00:00:00'),
+(46, '', '', '', 'images-4.jpg', '', 'image/jpeg', 23270, '0000-00-00 00:00:00'),
+(47, '', '', '', 'images-50 copy.jpg', '', 'image/jpeg', 21652, '0000-00-00 00:00:00'),
+(48, 'fgd', '', '', 'images-42.jpg', '', 'image/jpeg', 22401, '0000-00-00 00:00:00'),
+(49, 'fghgfdhj', 'gfjgsdjf', '', 'images-44 copy.jpg', 'dfgjdfgg', 'image/jpeg', 29486, '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -68,11 +96,18 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `password`, `first_name`, `last_name`, `userImage`) VALUES
-(58, 'fcgbfdgfcvfgbgfdgfbgdfgdf', 'fdshhdfdfh', 'sdfhfsshfdfhf', 'sfthaertwhtewy534622', 'images-5.jpg');
+(58, 'riko', '123', 'sdfhfsshfdfhfgfjhfghdjjhdhgfh', 'sfthaertwhtewy5346225465476534754385385348653358', 'images-5 copy.jpg');
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `comments`
+--
+ALTER TABLE `comments`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `photoId` (`photoId`);
 
 --
 -- Indexes for table `photos`
@@ -91,10 +126,16 @@ ALTER TABLE `users`
 --
 
 --
+-- AUTO_INCREMENT for table `comments`
+--
+ALTER TABLE `comments`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
 -- AUTO_INCREMENT for table `photos`
 --
 ALTER TABLE `photos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
 
 --
 -- AUTO_INCREMENT for table `users`

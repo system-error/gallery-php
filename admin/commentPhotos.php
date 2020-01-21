@@ -1,6 +1,14 @@
 <?php include("includes/header.php"); ?>
 <?php if(!$session->isLoggedIn()){redirect("login.php");} ?>
-<?php $comments =  Comment::findAll(); ?>
+<?php
+
+    if(empty($_GET['id'])){
+        redirect('photos.php');
+    }
+
+    $comments = Comment::findTheComment($_GET['id']);
+
+?>
 <!-- Navigation -->
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -22,7 +30,7 @@
                 <h1 class="page-header">
                     Comments
                 </h1>
-                <a href="addUser.php" class="btn btn-primary" >Add Comment</a>
+                <a href="addSpecificComment.php?id=<?php echo $_GET['id']; ?>" class="btn btn-primary" >Add Comment</a>
 
                 <ol class="breadcrumb">
                     <li>

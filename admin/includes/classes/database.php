@@ -1,5 +1,5 @@
 <?php
-require_once("includes/new_config.php");
+require_once(INCLUDES_PATH."/new_config.php");
 
 class Database{
     public $connection;

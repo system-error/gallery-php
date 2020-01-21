@@ -41,6 +41,7 @@
                                 <th>File Name</th>
                                 <th>Title</th>
                                 <th>Size</th>
+                                <th>Number Of Comments</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -50,13 +51,20 @@
                                         <div class="images">
                                             <a href="deleteImage.php?id=<?php echo $photo->id?>">Delete</a>
                                             <a href="editPhoto.php?id=<?php echo $photo->id?>">Edit</a>
-                                            <a href="">View</a>
+                                            <a href="../photo.php?id=<?php echo $photo->id?>">View</a>
                                         </div>
                                     </td>
                                     <td><?php echo $photo->id ?></td>
                                     <td><?php echo $photo->filename ?></td>
                                     <td><?php echo $photo->title ?></td>
                                     <td><?php echo floor($photo->size/1000) ?> KB</td>
+                                    <td>
+                                            <?php
+                                            $comments = Comment::findTheComment($photo->id);
+                                            ?>
+                                        <a href="commentPhotos.php?id=<?php echo $photo->id?>"><?php echo count($comments); ?></a>
+
+                                    </td>
                                 </tr>
                             <?php endforeach; ?>
                             </tbody>
