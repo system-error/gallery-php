@@ -39,34 +39,33 @@ class Photo extends DbClass
     }
 
     public function save(){
-        $photoPath = IMAGES_PATH.DS.$this->filename;
-        if($this->id){
-            $flag = true;
-            return $this->checkForErrors($photoPath,$this->filename,$flag,$this->tmpPath);
-        }else{
-            return $this->checkForErrors($photoPath,$this->filename,$flag = false,$this->tmpPath);
-
-//            if(!empty($this->customErrors)){
-//                return false;
-//            }
-//            if(empty($this->filename) || empty($this->tmpPath)){
-//                $this->customErrors[] = "The file was not available ";
-//                return false;
-//            }
-//            $photoPath = IMAGES_PATH.DS.$this->filename;
-//            if(file_exists($photoPath)){
-//                $this->customErrors[] = "The file {$this->filename} already exists";
-//                return false;
-//            }
-//            if(move_uploaded_file($this->tmpPath,$photoPath)){
-//                if($this->create()){
-//                    unset($this->tmpPath);
-//                    return true;
-//                }
-//            }else{
-//                $this->customErrors[] = "The file directory propably does not have permisions";
-//                return false;
-//            }
+        if ($this->id) {
+            if ($this->update()) {
+                unset($this->tmpPath);
+                return true;
+            }
+        }else {
+            if (!empty($this->customErrors)) {
+                return false;
+            }
+            if (empty($this->filename) || empty($this->tmpPath)) {
+                $this->customErrors[] = "The file was not available ";
+                return false;
+            }
+            $photoPath = IMAGES_PATH . DS . $this->filename;
+            if (file_exists($photoPath)) {
+                $this->customErrors[] = "The file {$this->filename} already exists";
+                return false;
+            }
+            if (move_uploaded_file($this->tmpPath, $photoPath)) {
+                if ($this->create()) {
+                    unset($this->tmpPath);
+                    return true;
+                }
+            } else {
+                $this->customErrors[] = "The file directory propably does not have permisions";
+                return false;
+            }
 
         }
     }
